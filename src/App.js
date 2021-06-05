@@ -17,11 +17,12 @@ function App() {
   const [newArticles, setNewArticles] = useState([]);
   const [topArticles, setTopArticles] = useState([]);
   const [subreddit, setSubreddit] = useState("dogs");
+  const [pageNumber, setPageNumber] = useState(20);
 
 
 //Fetch articles sorted by hot, new and top from the chosen subreddit
   useEffect(() => {
-    fetch(`https://www.reddit.com/r/${subreddit}/hot/.json?limit=20`).then((res) => {
+    fetch(`https://www.reddit.com/r/${subreddit}/hot/.json?limit=${pageNumber}`).then((res) => {
       if (res.status !== 200) {
         console.log("ERROR unable to retrieve default subreddit r/dogs");
         return;
@@ -34,7 +35,7 @@ function App() {
       });
     });
 
-    fetch(`https://www.reddit.com/r/${subreddit}/new/.json?limit=20`).then((res) => {
+    fetch(`https://www.reddit.com/r/${subreddit}/new/.json?limit=${pageNumber}`).then((res) => {
       if (res.status !== 200) {
         console.log("ERROR unable to retrieve default subreddit r/dogs");
         return;
@@ -47,7 +48,7 @@ function App() {
       });
     });
 
-    fetch(`https://www.reddit.com/r/${subreddit}/top/.json?limit=20`).then((res) => {
+    fetch(`https://www.reddit.com/r/${subreddit}/top/.json?limit=${pageNumber}`).then((res) => {
       if (res.status !== 200) {
         console.log("ERROR unable to retrieve default subreddit r/dogs");
         return;
@@ -59,7 +60,17 @@ function App() {
         }
       });
     })
-  },[subreddit]);
+  },[subreddit, pageNumber]);
+
+  //infinite scroll function
+  window.onscroll = function (){
+    if (
+      window.innerHeight + document.documentElement.scrollTop
+      === document.documentElement.offsetHeight
+    ) {
+      setPageNumber(pageNumber+5)
+    }
+  }
 
   return (
     <div className="App">

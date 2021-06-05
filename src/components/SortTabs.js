@@ -7,9 +7,9 @@ const SortTabs = (prop) => {
     const topArticles = prop.topArticles;
     console.log(hotArticles);
   return (
-    <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+    <Tabs className="tabs" defaultActiveKey="profile" id="uncontrolled-tab-example">
       <Tab eventKey="hot" title="Hot">
-        <ArticlesList articles={hotArticles} />
+        <ArticlesList articles={hotArticles}/>
       </Tab>
       <Tab eventKey="new" title="New">
         <ArticlesList articles={newArticles} />
