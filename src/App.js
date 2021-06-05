@@ -63,7 +63,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbars />
+      <Navbars subreddit={subreddit} setSubreddit={setSubreddit}/>
       <SortTabs hotArticles={hotArticles} newArticles={newArticles} topArticles={topArticles} />
     </div>
   );
