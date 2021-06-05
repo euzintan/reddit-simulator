@@ -22,7 +22,7 @@ code {
   justify-content: center;
   align-items: center;
   padding: 50px 50px;
-  
+
 }
 
 .article-preview a {
@@ -37,5 +37,9 @@ code {
   transform: translate(0px, -3px);
   transition: 0.5s;
   box-shadow: gray 5px 5px;
+}
+
+.tabs {
+  margin-top: 80px;
 }
 
