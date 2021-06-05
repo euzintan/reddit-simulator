@@ -9,8 +9,10 @@ import {
   Form,
   FormControl,
   Button,
+  InputGroup,
 } from "react-bootstrap";
 import SortDropdown from "./SortDropdown";
+import SubredditSearch from "./SubredditSearch";
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -20,11 +22,12 @@ function App() {
     <div className="App">
       <nav className="navbar">
         <h1>Reddit Simulator</h1>
-        <input type="text" vallue="subreddit" placeholder="subreddit" />
       </nav>
 
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <img src="reddit-logo.png" alt="reddit logo" width="30" height="30" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -32,10 +35,7 @@ function App() {
             <Nav.Link href="#link">Link</Nav.Link>
             <SortDropdown />
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          <SubredditSearch />
         </Navbar.Collapse>
       </Navbar>
 
@@ -46,6 +46,23 @@ function App() {
           </div>
         ))}
       </div>
+
+      <script
+        src="https://unpkg.com/react/umd/react.production.min.js"
+        crossorigin
+      ></script>
+
+      <script
+        src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+        crossorigin
+      ></script>
+
+      <script
+        src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+        crossorigin
+      ></script>
+
+      <script>var Alert = ReactBootstrap.Alert;</script>
     </div>
   );
 }
