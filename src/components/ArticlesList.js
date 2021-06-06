@@ -15,7 +15,7 @@ const ArticlesList = (prop) => {
             <a href={"https://reddit.com" + a.data.permalink}>
               <div>
                 <p className="title">
-                  {view == 1 ? a.data.title.substring(0, 100) +
+                  {view == 'myCard' ? a.data.title.substring(0, 100) +
                     (a.data.title.length >= 100 ? "..." : "") : a.data.title}
                 </p>
                 {view !== 'compact' && <p className="author">{`${a.data.author}`}</p>}
