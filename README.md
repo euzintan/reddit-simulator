@@ -13,7 +13,7 @@ Not optimised for Mobile viewing.
 
 ## Features:
 
-### Subreddit Search - Input any exact subreddit name to view its posts
+#### Subreddit Search - Input any exact subreddit name to view its posts
 
 ### View - Use the View: dropdown to choose between Card, Classic and Compact view
 
