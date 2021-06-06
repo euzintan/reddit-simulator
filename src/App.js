@@ -13,6 +13,7 @@ import SortTabs from "./components/SortTabs";
 />
 
 function App() {
+  const [view, setView] = useState(1);
   const [hotArticles, setHotArticles] = useState([]);
   const [newArticles, setNewArticles] = useState([]);
   const [topArticles, setTopArticles] = useState([]);
@@ -66,16 +67,17 @@ function App() {
   window.onscroll = function (){
     if (
       window.innerHeight + document.documentElement.scrollTop
-      === document.documentElement.offsetHeight
+      >= document.documentElement.offsetHeight - 50
     ) {
+      console.log(window.innerHeight + document.documentElement.scrollTop)
       setPageNumber(pageNumber+5)
     }
   }
 
   return (
     <div className="App">
-      <Navbars subreddit={subreddit} setSubreddit={setSubreddit}/>
-      <SortTabs hotArticles={hotArticles} newArticles={newArticles} topArticles={topArticles} />
+      <Navbars subreddit={subreddit} setSubreddit={setSubreddit} setView={setView}/>
+      <SortTabs view={view} hotArticles={hotArticles} newArticles={newArticles} topArticles={topArticles} />
     </div>
   );
 }

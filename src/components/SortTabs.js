@@ -5,17 +5,17 @@ const SortTabs = (prop) => {
     const hotArticles = prop.hotArticles;
     const newArticles = prop.newArticles;
     const topArticles = prop.topArticles;
-    console.log(hotArticles);
+    const view = prop.view;
   return (
-    <Tabs className="tabs" defaultActiveKey="profile" id="uncontrolled-tab-example">
+    <Tabs className={`tabs`}  defaultActiveKey="profile" id="uncontrolled-tab-example">
       <Tab eventKey="hot" title="Hot">
-        <ArticlesList articles={hotArticles}/>
+        <ArticlesList articles={hotArticles} view={view}/>
       </Tab>
       <Tab eventKey="new" title="New">
-        <ArticlesList articles={newArticles} />
+        <ArticlesList articles={newArticles} view={view}/>
       </Tab>
       <Tab eventKey="top" title="Top">
-        <ArticlesList articles={topArticles} />
+        <ArticlesList articles={topArticles} view={view}/>
       </Tab>
     </Tabs>
   );
