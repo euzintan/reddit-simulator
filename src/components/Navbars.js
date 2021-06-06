@@ -11,6 +11,8 @@ const Navbars = (prop) => {
   const subreddit = prop.subreddit;
   const setSubreddit = prop.setSubreddit;
   const setView = prop.setView;
+  const view = prop.view;
+  const viewType = view === 1 ? "Card" : view === 2 ? "Classic" : "Compact";
 
   return (
     <div>
@@ -21,7 +23,7 @@ const Navbars = (prop) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <NavDropdown title="View" id="basic-nav-dropdown">
+            <NavDropdown className="viewpicker" title={`View:${viewType}`} id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1" onSelect={() => setView(1)} >Card</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2" onSelect={() => setView(2)} >
                 Classic

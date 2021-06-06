@@ -58,6 +58,7 @@ function App() {
       res.json().then((data) => {
         if (data != null) {
           setTopArticles(data.data.children);
+          console.log(data)
         }
       });
     })
@@ -76,7 +77,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbars subreddit={subreddit} setSubreddit={setSubreddit} setView={setView}/>
+      <Navbars subreddit={subreddit} setSubreddit={setSubreddit} setView={setView} view={view}/>
       <SortTabs view={view} hotArticles={hotArticles} newArticles={newArticles} topArticles={topArticles} />
     </div>
   );

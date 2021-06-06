@@ -12,27 +12,27 @@ code {
     monospace;
 }
 
-.sc {
+.myCard > a {
   text-decoration: none;
   color: black;
-  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  border: 1px solid black;
-  padding: 5px 5px;
+  margin: 10px 10px;
 }
 
-.sc:hover {
+.myCard:hover {
   transform: translate(0px, -3px);
   transition: 0.5s;
   box-shadow: gray 5px 5px;
 }
 
 .myCard {
-  height: 120px;
+  padding: 0px 10px;
+  height: 250px;
   display: inline-block;
+  border: 1px solid black;
   width: 29%;
   margin: 2%;
   text-decoration: none;
@@ -43,24 +43,65 @@ code {
 }
 
 .classic {
-  margin-top: 55px;
-  background-color: blue;
+  display: block;
+  width: 100%;
+  border: 1px solid black;
+  margin: 10px 110px;
+  padding: 10px 0px;
+  text-decoration: none;
 }
+
+.classic:hover {
+  transform: translate(0px, -3px);
+  transition: 0.5s;
+  box-shadow: gray 5px 5px;
+}
+
+.classic > a {
+  text-decoration: none;
+  color: black;
+}
+
 .compact {
-  margin-top: 55px;
-  background-color: red;
+  display: block;
+  width: 100%;
+  border: 1px solid black;
+  margin: 10px 110px;
+  padding: 10px 0px;
+  text-decoration: none;
+}
+
+.compact:hover {
+  transform: translate(0px, -3px);
+  transition: 0.5s;
+  box-shadow: gray 5px 5px;
+}
+
+.compact > a {
+  text-decoration: none;
+  color: black;
+}
+
+.title {
+  display: block;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
+
+.commentCount {
+  margin: 0px 0px;
+}
+
+.scoreCount {
+  margin: 0px 0px;
+}
+
+.author {
+  font-size: smaller;
 }
 
 .tabs {
   margin-top: 55px;
-}
-
-.myCard a {
-  text-decoration: none;
-}
-
-.myCard a:hover {
-  text-decoration: none;
 }
 
 .article-list {
@@ -68,6 +109,10 @@ code {
   justify-content: center;
   align-items: baseline;
   align-content: baseline;
-  
+}
+
+.article-preview > p {
+  text-decoration: none;
+  color: black;
 }
 
