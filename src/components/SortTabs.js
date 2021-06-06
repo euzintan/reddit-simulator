@@ -9,7 +9,7 @@ const SortTabs = (prop) => {
   return (
     <Tabs
       className={`tabs`}
-      defaultActiveKey="profile"
+      defaultActiveKey="hot"
       id="uncontrolled-tab-example"
     >
       <Tab eventKey="hot" title="Hot">
