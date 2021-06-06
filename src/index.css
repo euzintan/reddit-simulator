@@ -12,34 +12,62 @@ code {
     monospace;
 }
 
-.article-preview p {
+.sc {
   text-decoration: none;
   color: black;
-  border: 1px solid black;
-  height: 50px;
-  margin: 20px 10px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 50px;
-
+  align-content: center;
+  border: 1px solid black;
+  padding: 5px 5px;
 }
 
-.article-preview a {
-  text-decoration: none;
-}
-
-.article-preview a:hover {
-  text-decoration: none;
-}
-
-.article-preview p:hover {
+.sc:hover {
   transform: translate(0px, -3px);
   transition: 0.5s;
   box-shadow: gray 5px 5px;
 }
 
+.myCard {
+  height: 120px;
+  display: inline-block;
+  width: 29%;
+  margin: 2%;
+  text-decoration: none;
+  margin-top: 55px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.classic {
+  margin-top: 55px;
+  background-color: blue;
+}
+.compact {
+  margin-top: 55px;
+  background-color: red;
+}
+
 .tabs {
-  margin-top: 80px;
+  margin-top: 55px;
+}
+
+.myCard a {
+  text-decoration: none;
+}
+
+.myCard a:hover {
+  text-decoration: none;
+}
+
+.article-list {
+  max-width: 100%;
+  justify-content: center;
+  align-items: baseline;
+  align-content: baseline;
+  
 }
 
