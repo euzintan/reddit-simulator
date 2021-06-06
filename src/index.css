@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.myCard > a {
+/* .myCard > a {
   text-decoration: none;
   color: black;
   display: flex;
@@ -33,13 +33,56 @@ code {
   height: 250px;
   display: inline-block;
   border: 1px solid black;
-  width: 29%;
+  width: 20%;
   margin: 2%;
   text-decoration: none;
   margin-top: 55px;
   align-items: center;
   align-content: center;
   justify-content: center;
+} */
+
+.myCard {
+  border: 1px solid black;
+  margin: 50px 10px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.myCard:hover {
+  transform: translate(0px, -3px);
+  transition: 0.5s;
+  box-shadow: gray 5px 5px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.title {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  text-overflow: ellipsis;
+  margin: 0px 30px;
+}
+
+
+
+.myCard > .row {
+  margin: 5px 0px;
+}
+
+.myCard > .scoreRow {
+  justify-self: flex-end;
+}
+
+.myRow {
+  align-items: center;
 }
 
 .classic {
@@ -82,11 +125,7 @@ code {
   color: black;
 }
 
-.title {
-  display: block;
-  text-overflow: ellipsis;
-  font-weight: 600;
-}
+
 
 .commentCount {
   margin: 0px 0px;
@@ -105,6 +144,8 @@ code {
 }
 
 .article-list {
+  display:flex;
+  flex-wrap: wrap;
   max-width: 100%;
   justify-content: center;
   align-items: baseline;
@@ -114,5 +155,9 @@ code {
 .article-preview > p {
   text-decoration: none;
   color: black;
+}
+
+.col {
+  padding: 0px 0px;
 }
 
