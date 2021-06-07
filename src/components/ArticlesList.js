@@ -11,7 +11,7 @@ const ArticlesList = (prop) => {
       <Row className="myRow">
         {myArticles.map((a) => {
           const score = a.data.score;
-          return <Col md="4">
+          return <Col className md={view === "myCard" ? "4" : "10"}>
             <div className={`article-preview, ${view}`} key={a.data.id}>
               <Row>
                 <a href={"https://reddit.com" + a.data.permalink}>
